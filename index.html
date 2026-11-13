@@ -195,7 +195,7 @@ var RZ=["Tu sonrisa me arregla hasta el peor día.","Contigo hasta el silencio s
 function cards(){show("cards");var g=$("grid"),c=0;g.innerHTML="";$("cn").textContent=0;$("rb").textContent="Toca una carta 🍀";$("goletter").style.display="none";
 RZ.forEach(function(t,i){var b=document.createElement("button");b.className="c";b.type="button";b.textContent="🍀";b.setAttribute("aria-label","Carta "+(i+1));
 b.addEventListener("click",function(){if(!b.classList.contains("op")){b.classList.add("op");b.textContent="❤️";c++;$("cn").textContent=c;burst(["✨"],3);if(c>=5)$("goletter").style.display="inline-block"}sfx(500+i*40,.14);$("rb").textContent=t});g.appendChild(b)})}
-$("goletter").addEventListener("click",letter);$("song").addEventListener("click",function(){music(false)});
+$("goletter").addEventListener("click",letter);
 function countdown(){var d=Math.ceil((new Date(2027,7,13)-new Date())/864e5),e=$("cd");e.textContent=d>0?"Faltan "+d+" días para el próximo viernes 13. Yo ya sé con quién quiero pasarlo 🍀":""}
 $("love").addEventListener("click",function(){burst(["❤️","💖","💗","💘","💕"],80);[523,659,784,1047].forEach(function(f,i){setTimeout(function(){sfx(f,.15,.9)},i*120)})});
 var hl=$("hearts"),hs=["❤️","🍀","💗","✨"];
